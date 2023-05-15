@@ -41,7 +41,7 @@ app.post('/', function(req, res) {
      const url = "https://us21.api.mailchimp.com/3.0/lists/bfafb280d9";
      const options = {
           method: "POST",
-          auth: "navdeep:" + apiKey
+          auth: "navdeep:b9d9161606b91762b91847f25fdc6045-us21"
      }
      const request = https.request(url, options, function(response) {
           if(response.statusCode === 200) {
@@ -62,7 +62,7 @@ app.post("/failure", function(req, res) {
      res.redirect("/");
 })
 
-app.listen(3000, function() {
+app.listen(process.env.PORT, function() {
      console.log("server is running");
 });
 
